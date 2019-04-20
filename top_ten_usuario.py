@@ -45,11 +45,11 @@ if __name__ == '__main__':
     conn = create_connection()
     print(conn)
     print('Uploading df to SQlite Table...')
-    copy_table_from_df(conn=conn, filepath='data/users_hitaviso.csv', table_name='tabla')
+    copy_table_from_df(conn=conn, filepath='data/postulaciones_train.csv', table_name='tabla')
 
     sql = """
     SELECT 
-            idusuario,
+            idpostulante,
             idaviso,
             count(*) AS cant_vista
     FROM tabla 
@@ -72,34 +72,37 @@ if __name__ == '__main__':
     print('Grouping results per client...')
     lst = []
     for key in dict:
-        sub_lst = []
         if len(dict[key]) > 10:
-            sub_lst = [key, ' '.join(dict[key][:10])]
+            for i in range(10):
+                lst.append([key, dict[key][i]])
         else:
-            sub_lst = [key, ' '.join(dict[key])]
-        lst.append(sub_lst)
+            for i in range(len(dict[key])):
+                lst.append([key, dict[key][i]])
 
-    df = pd.DataFrame(lst, columns=['idusuario', 'idavisos'])
+    print(lst)
+    df = pd.DataFrame(lst, columns=['idpostulante', 'idaviso'])
+    df['idaviso'] = df['idaviso'].astype(int).astype('str')
+    print(df.head(30))
 
-    test = pd.read_csv('data/contactos_test.csv')
+    test = pd.read_csv('data/ejemplo_solution.csv')
 
     print('Merging results...')
     submission = pd.merge(
-        test[['idusuario']],
+        test[['idpostulante']],
         df,
-        left_on='idusuario',
-        right_on='idusuario',
+        left_on='idpostulante',
+        right_on='idpostulante',
         how='left'
     )
-    print(submission[submission.idavisos.notnull()].head(30))
-    print(len(submission[submission.idavisos.notnull()]))
-    print(len(submission[submission.idavisos.isnull()]))
+    print(submission[submission.idaviso.notnull()].head(30))
+    print(len(submission[submission.idaviso.notnull()]))
+    print(len(submission[submission.idaviso.isnull()]))
 
-    top_ten = "b4d408ac861643e406fff0df747b1498e05c9ccf a3c012c26c38a20ea276e005fb497aa87da72a31 516475402f7189f82624606bb5ed0020671fc3c7 57d98bb45d992aaa00a2426b1c71ca3b253014f6 65e6f5fb6aa6f97acaa843e931b42d951e0c9f61 5ba93bf725a78e530df4b2e1884baf1185d45ba1 ad900f00623c0f9fc17f79f3fa5fa2b9b1a35922 f1e36e94066f7fe6806a5bfd95fa82223ef6615c 64da4815303c8168b9c54c23cc568e029a979347 c79ac2a1684ae683bfa25947c05100e628ca21e2"
+    #top_ten = "a"
 
-    submission.loc[submission.idavisos.isnull(), ['idavisos']] = top_ten
-    print(len(submission[submission.idavisos.notnull()]))
-    print(len(submission[submission.idavisos.isnull()]))
+    #submission.loc[submission.idaviso.isnull(), ['idaviso']] = top_ten
+    #print(len(submission[submission.idaviso.notnull()]))
+    #print(len(submission[submission.idaviso.isnull()]))
 
-    submission.to_csv('salidas/submision.csv', index=False)
+    submission.to_csv('salidas/submission.csv', index=False)
     close_connection(conn=conn)
