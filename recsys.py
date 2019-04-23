@@ -24,9 +24,8 @@ def create_interaction_matrix(df, user_col, item_col, rating_col, norm=False, th
     Expected output -
         - Pandas dataframe with user-item interactions ready to be fed in a recommendation algorithm
     '''
-    interactions = df.groupby([user_col, item_col])[rating_col] \
-        .sum().unstack().reset_index(). \
-        fillna(0).set_index(user_col)
+    interactions = df.groupby([user_col, item_col])[rating_col].sum()
+    interactions = interactions.unstack().reset_index().fillna(0).set_index(user_col)
     if norm:
         interactions = interactions.applymap(lambda x: 1 if x > threshold else 0)
     return interactions
@@ -105,9 +104,13 @@ def sample_recommendation_user(model, interactions, user_id, user_dict,
     scores.index = interactions.columns
     scores = list(pd.Series(scores.sort_values(ascending=False).index))
 
-    known_items = list(pd.Series(interactions.loc[user_id, :] \
-                                     [interactions.loc[user_id, :] > threshold].index) \
-                       .sort_values(ascending=False))
+    known_items = list(
+        pd.Series(
+            interactions.loc[user_id, :][interactions.loc[user_id, :] > threshold].index
+        ).sort_values(
+            ascending=False
+        )
+    )
 
     scores = [x for x in scores if x not in known_items]
     return_score_list = scores[0:nrec_items]

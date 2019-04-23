@@ -13,7 +13,7 @@ from lightfm import evaluation
 
 print('Reading train pickle...')
 df_train = pd.read_pickle('data/train.pkl')
-df_train = df_train[:10000]
+df_train = df_train[:100000]
 df_train['rating'] = 1
 print(df_train.head())
 print(50 * '-')
@@ -60,7 +60,7 @@ mf_model = rs.runMF(interactions=interactions,
                     n_components=30,
                     loss='warp',
                     k=15,
-                    epoch=30,
+                    epoch=50,
                     n_jobs=4)
 print(50 * "-")
 print('Building Recommendations...')
@@ -71,10 +71,10 @@ dict = defaultdict(list)
 for user in users:
     rec_list = rs.sample_recommendation_user(model=mf_model,
                                              interactions=interactions,
-                                             user_id="ZaO5",
+                                             user_id=user,
                                              user_dict=user_dict,
                                              item_dict=avisos_dict,
-                                             threshold=4,
+                                             threshold=0,
                                              nrec_items=10,
                                              show=False)
     dict[user].append(rec_list)
