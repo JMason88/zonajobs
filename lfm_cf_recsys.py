@@ -13,7 +13,7 @@ from lightfm import evaluation
 
 print('Reading train pickle...')
 df_train = pd.read_pickle('data/train.pkl')
-df_train = df_train[:100000]
+#df_train = df_train[:1500000]
 df_train['rating'] = 1
 print(df_train.head())
 print(50 * '-')
