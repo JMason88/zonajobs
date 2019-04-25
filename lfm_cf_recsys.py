@@ -45,7 +45,7 @@ print(50 * '-')
 
 print('Creating User Dictionary...')
 user_dict = rs.create_user_dict(interactions=interactions)
-print(user_dict)
+#print(user_dict)
 print(50 * '-')
 
 print('Creating Item Dictionary...')
