@@ -79,13 +79,13 @@ if __name__ == '__main__':
             for i in range(len(dict[key])):
                 lst.append([key, dict[key][i]])
 
-    print(lst)
+    #print(lst)
     df = pd.DataFrame(lst, columns=['idpostulante', 'idaviso'])
     df['idaviso'] = df['idaviso'].astype(int).astype('str')
     print(df.head(30))
 
     test = pd.read_csv('data/ejemplo_solution.csv')
-
+    print(test.shape)
     print('Merging results...')
     submission = pd.merge(
         test[['idpostulante']],
