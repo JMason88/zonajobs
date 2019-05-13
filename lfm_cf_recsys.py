@@ -61,7 +61,7 @@ mf_model = rs.runMF(interactions=interactions,
                     loss='warp',
                     k=15,
                     epoch=50,
-                    n_jobs=-1)
+                    n_jobs=12)
 print(50 * "-")
 print('Building Recommendations...')
 
