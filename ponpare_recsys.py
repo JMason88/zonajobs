@@ -67,8 +67,7 @@ def build_user_feature_matrix(week_ID):
 
     """
 
-    print
-    "Creating user_feature matrix for LightFM"
+    print("Creating user_feature matrix for LightFM")
 
     def age_function(age, age_low=0, age_up=100):
         """Binarize age in age slices"""

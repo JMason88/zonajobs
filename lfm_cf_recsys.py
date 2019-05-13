@@ -3,7 +3,7 @@ import numpy as np
 import pandas as pd
 from scipy.sparse import coo_matrix
 from collections import defaultdict
-from top_ten_recsys import top_ten_recommender
+from top_ten_user_filter import top_ten_custom
 
 
 import lightfm as lfm
@@ -13,7 +13,7 @@ from lightfm import evaluation
 
 print('Reading train pickle...')
 df_train = pd.read_pickle('data/train.pkl')
-#df_train = df_train[:1500000]
+#df_train = df_train[:15000]
 df_train['rating'] = 1
 print(df_train.head())
 print(50 * '-')
@@ -109,10 +109,23 @@ print(50*"-")
 print("Cantidad de usuarios CON predicción: {}".format(len(submission[submission.idaviso.notnull()])))
 print("Cantidad de usuarios SIN predicción: {}".format(len(submission[submission.idaviso.isnull()])))
 
-top_ten_prediction = top_ten_recommender(
-    test=submission[submission.idaviso.isnull()],
-    verbose=False
+
+top_ten_prediction = top_ten_custom()
+top_ten_prediction = pd.merge(
+    left=submission[submission.idaviso.isnull()].reset_index(),
+    right=top_ten_prediction,
+    how='inner',
+    on='idpostulante'
 )
+
+top_ten_prediction['idaviso'] = top_ten_prediction.idaviso_y
+top_ten_prediction = top_ten_prediction[['idpostulante', 'idaviso']]
+print(50*"-")
+print("Revisar")
+print(50*"-")
+
+print(top_ten_prediction.head(15))
+
 
 submission = pd.concat([submission[submission.idaviso.notnull()], top_ten_prediction])
 print(submission.head(15))

@@ -58,7 +58,7 @@ def top_ten_custom():
             for i in range(len(dict[key])):
                 lst.append([key, dict[key][i]])
 
-    print(lst)
+    #print(lst)
     df = pd.DataFrame(lst, columns=['idpostulante', 'idaviso'])
     df['idaviso'] = df['idaviso'].astype(int).astype('str')
     print(df.head(30))
