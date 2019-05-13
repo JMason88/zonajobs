@@ -8,8 +8,8 @@ def top_ten_custom():
     conn = sql_fun.create_connection()
     print(conn)
     print('Uploading df to SQlite Table...')
-    sql_fun.copy_table_from_df(conn=conn, filepath='data/postulaciones_train.csv', table_name='train')
-    sql_fun.copy_table_from_df(conn=conn, filepath='data/ejemplo_solution.csv', table_name='test')
+    sql_fun.copy_table_from_df2(conn=conn, filepath='data/train.pkl', table_name='train')
+    sql_fun.copy_table_from_df2(conn=conn, filepath='data/test.pkl', table_name='test')
 
 
     sql = """
@@ -63,7 +63,7 @@ def top_ten_custom():
     df['idaviso'] = df['idaviso'].astype(int).astype('str')
     print(df.head(30))
 
-    test = pd.read_csv('data/ejemplo_solution.csv')
+    test = pd.read_pickle('data/test.pkl')
     print(test.shape)
     print('Merging results...')
     submission = pd.merge(

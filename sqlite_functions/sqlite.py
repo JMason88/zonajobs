@@ -39,3 +39,7 @@ def copy_expert_sqlite(conn, filepath, table_name):
 def copy_table_from_df(conn, filepath, table_name):
     file = pd.read_csv(filepath)
     file.to_sql(table_name, conn, index=False)
+
+def copy_table_from_df2(conn, filepath, table_name):
+    file = pd.read_pickle(filepath)
+    file.to_sql(table_name, conn, index=False)
