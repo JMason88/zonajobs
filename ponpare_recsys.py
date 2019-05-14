@@ -59,7 +59,7 @@ def build_user_item_mtrx(train_file, test_file, user_file, item_file):
     #    Mui_tr)
 
 
-def build_user_feature_matrix(week_ID):
+def build_user_feature_matrix(dataset):
     """ Build user feature matrix
     (feat = AGE, SEX_ID, these feat are then binarized)
 
@@ -281,3 +281,9 @@ def build_item_feature_matrix(week_ID):
     spi.mmwrite(
         "../Data/Validation/%s/test_item_feat_mtrx_%s.mtx" %
         (week_ID, week_ID), cplte)
+
+
+
+
+
+    if __name__ == '__main__':
