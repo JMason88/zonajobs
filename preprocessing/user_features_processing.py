@@ -3,7 +3,7 @@ os.chdir("../")
 print(os.getcwd())
 
 import sys
-sys.path.append('../')
+sys.path.append(os.getcwd())
 
 import pandas as pd
 import sqlite_functions.sqlite as sql_fun
