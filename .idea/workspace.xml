@@ -2,15 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aadb1c7-7025-4295-8a51-cc5af6312089" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/item_features_processing.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/lfm_build_matrices.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/preprocessing/user_features_processing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/features_processing.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ponpare_recsys.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recsys.py" beforeDir="false" afterPath="$PROJECT_DIR$/recsys.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sqlite_functions/sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite_functions/sqlite.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -77,8 +69,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="126" selection-start-line="126" selection-end-line="126" />
+            <state relative-caret-position="214">
+              <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -594,8 +586,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
+        <state relative-caret-position="214">
+          <caret line="152" column="5" selection-start-line="152" selection-start-column="5" selection-end-line="152" selection-end-column="5" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

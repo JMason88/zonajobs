@@ -142,7 +142,7 @@ if __name__ == "__main__":
                                                  njobs=4)
         dict[user].append(rec_list)
 
-    print(dict)
+    #print(dict)
 
     print('Grouping results per client...')
     lst = []
@@ -150,7 +150,7 @@ if __name__ == "__main__":
         for recommendation in dict[key][0]:
             lst.append([key, recommendation])
 
-    print(lst)
+    #print(lst)
 
     prediction = pd.DataFrame(lst, columns=['idpostulante', 'idaviso'])
     prediction['idaviso'] = prediction['idaviso'].astype(int).astype('str')
