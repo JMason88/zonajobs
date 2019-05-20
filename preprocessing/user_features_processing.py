@@ -1,3 +1,6 @@
+import sys
+sys.path.append('../')
+
 import pandas as pd
 import sqlite_functions.sqlite as sql_fun
 import scipy.sparse as sps
