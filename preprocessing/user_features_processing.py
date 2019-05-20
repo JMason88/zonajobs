@@ -14,14 +14,15 @@ import numpy as np
 if __name__ == '__main__':
     con = sql_fun.create_connection()
 
-    genero = pd.read_csv('data/postulantes_genero_edad.csv')
+    print(os.getcwd() +'/data/postulantes_genero_edad.csv')
+    genero = pd.read_csv(os.getcwd() +'/data/postulantes_genero_edad.csv')
     genero.drop_duplicates(inplace=True)
     print(genero.fechanacimiento.unique())
     print(genero.sexo.unique())
     print('Creating genero_edad table...')
-    sql_fun.copy_table_from_df(con, 'data/postulantes_genero_edad.csv', 'genero_edad', rm_duplicate=True)
+    sql_fun.copy_table_from_df(con, os.getcwd() + '/data/postulantes_genero_edad.csv', 'genero_edad', rm_duplicate=True)
     print('Creating educacion table...')
-    sql_fun.copy_table_from_df(con, 'data/postulantes_educacion.csv', 'educacion')
+    sql_fun.copy_table_from_df(con, os.getcwd() + '/data/postulantes_educacion.csv', 'educacion')
 
     sql_1 = '''
     SELECT
@@ -97,4 +98,4 @@ if __name__ == '__main__':
 
     df = sql_fun.sql_to_pandas(con, sql)
 
-    df.to_pickle('preprocessing/entrada/user_features.pkl')
+    df.to_pickle(os.getcwd() + '/preprocessing/entrada/user_features.pkl')
