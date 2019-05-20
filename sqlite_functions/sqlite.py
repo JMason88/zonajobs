@@ -36,10 +36,21 @@ def copy_expert_sqlite(conn, filepath, table_name):
 
     conn.commit()
 
-def copy_table_from_df(conn, filepath, table_name):
+def copy_table_from_df(conn, filepath, table_name, rm_duplicate = False):
     file = pd.read_csv(filepath)
+    if rm_duplicate:
+        file.drop_duplicates(inplace=True)
     file.to_sql(table_name, conn, index=False)
 
-def copy_table_from_df2(conn, filepath, table_name):
+def copy_table_from_df2(conn, filepath, table_name, rm_duplicate = False):
     file = pd.read_pickle(filepath)
+    if rm_duplicate:
+        file.drop_duplicates(inplace=True)
     file.to_sql(table_name, conn, index=False)
+
+def sql_to_pandas(conn, sql):
+    cur = conn.cursor()
+    cur.execute(sql)
+    df = pd.DataFrame(cur.fetchall())
+    df.columns = list(map(lambda x: x[0], cur.description))
+    return df

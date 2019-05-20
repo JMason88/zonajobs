@@ -2,9 +2,15 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6aadb1c7-7025-4295-8a51-cc5af6312089" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/features_processing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preprocessing/item_features_processing.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preprocessing/lfm_build_matrices.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/preprocessing/user_features_processing.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ponpare_recsys.py" beforeDir="false" afterPath="$PROJECT_DIR$/ponpare_recsys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/features_processing.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ponpare_recsys.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/recsys.py" beforeDir="false" afterPath="$PROJECT_DIR$/recsys.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/sqlite_functions/sqlite.py" beforeDir="false" afterPath="$PROJECT_DIR$/sqlite_functions/sqlite.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -17,8 +23,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recsys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="121" column="8" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+            <state relative-caret-position="-16">
+              <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
             </state>
           </provider>
         </entry>
@@ -26,7 +32,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/top_ten_user_filter.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="894">
+            <state relative-caret-position="1105">
               <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
               <folding>
                 <element signature="e#0#14#0" expanded="true" />
@@ -36,10 +42,19 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/ponpare_recsys.py">
+        <entry file="file://$PROJECT_DIR$/top_ten_recsys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="278">
-              <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
+            <state relative-caret-position="569">
+              <caret line="51" selection-start-line="51" selection-end-line="51" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/preprocessing/lfm_build_matrices.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="115">
+              <caret line="49" column="26" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -48,19 +63,22 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/postulantes_educacion.csv">
-          <provider selected="true" editor-type-id="LargeFileEditor">
-            <state relative-caret-position="7463">
-              <caret line="439" selection-start-line="439" selection-end-line="439" />
+        <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="1530">
+              <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/features_processing.py">
+        <entry file="file://$PROJECT_DIR$/main.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="48" column="98" selection-start-line="48" selection-start-column="98" selection-end-line="48" selection-end-column="98" />
+            <state relative-caret-position="85">
+              <caret line="126" selection-start-line="126" selection-end-line="126" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -69,10 +87,13 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/postulantes_genero_edad.csv">
-          <provider selected="true" editor-type-id="csv-text-editor">
+        <entry file="file://$PROJECT_DIR$/preprocessing/user_features_processing.py">
+          <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="28" selection-start-column="13" selection-end-column="28" />
+              <caret selection-end-line="92" selection-end-column="59" />
+              <folding>
+                <element signature="e#0#19#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -80,20 +101,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/lfm_cf_recsys.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="227">
-              <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
-              <folding>
-                <element signature="e#0#19#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data_to_pickle.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="30" column="35" selection-start-line="30" selection-start-column="35" selection-end-line="30" selection-end-column="35" />
+            <state relative-caret-position="68">
+              <caret line="4" column="35" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
             </state>
           </provider>
         </entry>
@@ -111,6 +120,8 @@
     <findStrings>
       <find>NdJl</find>
       <find>1112233270</find>
+      <find>0z5JW1r</find>
+      <find>1 ELSE 0 END) as</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -123,13 +134,17 @@
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/data_to_pickle.py" />
         <option value="$PROJECT_DIR$/top_ten_recsys.py" />
-        <option value="$PROJECT_DIR$/recsys.py" />
         <option value="$PROJECT_DIR$/top_ten_usuario.py" />
-        <option value="$PROJECT_DIR$/sqlite_functions/sqlite.py" />
         <option value="$PROJECT_DIR$/top_ten_user_filter.py" />
         <option value="$PROJECT_DIR$/lfm_cf_recsys.py" />
         <option value="$PROJECT_DIR$/ponpare_recsys.py" />
+        <option value="$PROJECT_DIR$/sqlite_functions/sqlite.py" />
         <option value="$PROJECT_DIR$/features_processing.py" />
+        <option value="$PROJECT_DIR$/preprocessing/user_features_processing.py" />
+        <option value="$PROJECT_DIR$/preprocessing/lfm_build_matrices.py" />
+        <option value="$PROJECT_DIR$/preprocessing/item_features_processing.py" />
+        <option value="$PROJECT_DIR$/recsys.py" />
+        <option value="$PROJECT_DIR$/main.py" />
       </list>
     </option>
   </component>
@@ -160,6 +175,17 @@
             <path>
               <item name="zonajobs" type="b2602c69:ProjectViewProjectNode" />
               <item name="zonajobs" type="462c0819:PsiDirectoryNode" />
+              <item name="preprocessing" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zonajobs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zonajobs" type="462c0819:PsiDirectoryNode" />
+              <item name="preprocessing" type="462c0819:PsiDirectoryNode" />
+              <item name="entrada" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="zonajobs" type="b2602c69:ProjectViewProjectNode" />
+              <item name="zonajobs" type="462c0819:PsiDirectoryNode" />
               <item name="salidas" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -176,10 +202,13 @@
   </component>
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ICTool_BP/ictool_bp" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../ICTool_BP/ictool_bp/Intelligent_Collections_3.0/modulo_de_depuracion/sqlite_functions/sqlite.py" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\j.etcheberry.mason\Documents\GitHub\zonajobs\preprocessing" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\j.etcheberry.mason\Documents\GitHub\zonajobs" />
     </key>
@@ -196,28 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.features_processing">
-    <configuration name="data_to_pickle" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="zonajobs" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/data_to_pickle.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
+  <component name="RunManager" selected="Python.main">
     <configuration name="features_processing" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zonajobs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -230,7 +238,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/features_processing.py" />
+      <option name="SCRIPT_NAME" value="C:\Users\j.etcheberry.mason\Documents\GitHub\zonajobs\preprocessing\user_features_processing.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -252,6 +260,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/lfm_cf_recsys.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="zonajobs" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -304,11 +333,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.features_processing" />
         <item itemvalue="Python.lfm_cf_recsys" />
         <item itemvalue="Python.top_ten_user_filter" />
         <item itemvalue="Python.top_ten_usuario" />
-        <item itemvalue="Python.data_to_pickle" />
       </list>
     </recent_temporary>
   </component>
@@ -335,6 +364,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1295" height="695" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.16997617" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
@@ -342,7 +372,7 @@
       <window_info id="DB Browser" order="3" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960285" weight="0.34219858" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960285" visible="true" weight="0.34219858" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -412,49 +442,42 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/top_ten_recsys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="397">
-          <caret line="51" selection-start-line="51" selection-end-line="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/postulaciones_train.csv">
-      <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="714">
-          <caret line="42" column="35" selection-start-line="21" selection-end-line="42" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/salidas/submission.csv">
-      <provider selected="true" editor-type-id="csv-text-editor" />
+      <provider editor-type-id="csv-table-editor">
+        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+      </provider>
       <provider editor-type-id="LargeFileEditor">
         <state relative-caret-position="187">
           <caret line="11" column="15" selection-end-line="1" selection-end-column="9" />
         </state>
       </provider>
+      <provider selected="true" editor-type-id="csv-text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/avisos_online.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/avisos_online.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state>
           <caret column="6" selection-start-column="6" selection-end-column="6" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/ejemplo_solution.csv">
       <provider editor-type-id="csv-table-editor">
         <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/ejemplo_solution.csv">
       <provider selected="true" editor-type-id="csv-text-editor">
         <state relative-caret-position="102">
           <caret line="6" column="5" selection-start-line="6" selection-start-column="5" selection-end-line="6" selection-end-column="5" />
         </state>
       </provider>
-      <provider editor-type-id="csv-table-editor">
-        <state showInfoPanel="true" fixedHeaders="false" rowLines="3" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/postulantes_genero_edad.csv">
+      <provider selected="true" editor-type-id="csv-text-editor">
+        <state relative-caret-position="7587015">
+          <caret line="446295" column="7" selection-start-line="446295" selection-end-line="446295" selection-end-column="7" />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/data_to_pickle.py">
@@ -464,40 +487,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/lfm_cf_recsys.py">
+    <entry file="file://$PROJECT_DIR$/../../ICTool_BP/ictool_bp/Intelligent_Collections_3.0/modulo_de_depuracion/sqlite_functions/sqlite.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="61" column="7" selection-start-line="61" selection-start-column="7" selection-end-line="61" selection-end-column="7" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/ponpare_recsys.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="80" column="37" lean-forward="true" selection-start-line="80" selection-start-column="37" selection-end-line="80" selection-end-column="37" />
-          <folding>
-            <element signature="e#0#19#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sqlite_functions/sqlite.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="43" column="26" selection-start-line="43" selection-start-column="26" selection-end-line="43" selection-end-column="26" />
-          <folding>
-            <element signature="e#0#14#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/top_ten_user_filter.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="894">
-          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+        <state relative-caret-position="189">
+          <caret line="63" column="13" lean-forward="true" selection-start-line="58" selection-end-line="63" selection-end-column="13" />
           <folding>
             <element signature="e#0#14#0" expanded="true" />
           </folding>
@@ -506,29 +499,103 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/data/postulantes_educacion.csv">
       <provider selected="true" editor-type-id="LargeFileEditor">
-        <state relative-caret-position="7463">
+        <state relative-caret-position="285">
           <caret line="439" selection-start-line="439" selection-end-line="439" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/ponpare_recsys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="482">
+          <caret line="124" column="27" selection-start-line="124" selection-start-column="27" selection-end-line="124" selection-end-column="27" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/sqlite_functions/sqlite.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="50" column="13" selection-start-line="50" selection-start-column="13" selection-end-line="50" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/user_features_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="92" selection-end-column="59" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1530">
+          <caret line="90" column="44" selection-start-line="90" selection-start-column="44" selection-end-line="90" selection-end-column="44" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lfm_cf_recsys.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="35" selection-start-line="4" selection-end-line="4" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/postulaciones_train.csv">
+      <provider selected="true" editor-type-id="LargeFileEditor">
+        <state relative-caret-position="74">
+          <caret line="28" column="15" selection-start-line="28" selection-start-column="11" selection-end-line="28" selection-end-column="15" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/recsys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="121" column="8" lean-forward="true" selection-start-line="121" selection-start-column="8" selection-end-line="121" selection-end-column="8" />
+        <state relative-caret-position="-16">
+          <caret line="119" column="33" selection-start-line="119" selection-start-column="33" selection-end-line="119" selection-end-column="33" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/postulantes_genero_edad.csv">
-      <provider selected="true" editor-type-id="csv-text-editor">
-        <state>
-          <caret column="28" selection-start-column="13" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/features_processing.py">
+    <entry file="file://$PROJECT_DIR$/top_ten_recsys.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="227">
-          <caret line="48" column="98" selection-start-line="48" selection-start-column="98" selection-end-line="48" selection-end-column="98" />
+        <state relative-caret-position="569">
+          <caret line="51" selection-start-line="51" selection-end-line="51" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/top_ten_user_filter.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1105">
+          <caret line="65" column="40" selection-start-line="65" selection-start-column="40" selection-end-line="65" selection-end-column="40" />
+          <folding>
+            <element signature="e#0#14#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/lfm_build_matrices.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="115">
+          <caret line="49" column="26" selection-start-line="47" selection-start-column="8" selection-end-line="49" selection-end-column="26" />
+          <folding>
+            <element signature="e#0#19#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/main.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="126" selection-start-line="126" selection-end-line="126" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>

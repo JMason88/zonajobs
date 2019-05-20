@@ -64,7 +64,7 @@ def create_item_dict(df, id_col, name_col):
     return item_dict
 
 
-def runMF(interactions, n_components=30, loss='warp', k=15, epoch=30, n_jobs=4):
+def runMF(interactions, user_feat=None, item_feat=None, n_components=30, loss='warp', k=15, epoch=30, n_jobs=4):
     '''
     Function to run matrix-factorization algorithm
     Required Input -
@@ -76,14 +76,21 @@ def runMF(interactions, n_components=30, loss='warp', k=15, epoch=30, n_jobs=4):
     Expected Output  -
         Model - Trained model
     '''
-    x = sparse.csr_matrix(interactions.values)
+
+    if isinstance(interactions, sparse.coo_matrix):
+        x = interactions
+    else:
+        x = sparse.csr_matrix(interactions.values)
+
     model = LightFM(no_components=n_components, loss=loss, k=k)
-    model.fit(x, epochs=epoch, num_threads=n_jobs)
+    model.fit(x, user_features=user_feat, item_features=item_feat, epochs=epoch, num_threads=n_jobs)
+
     return model
 
 
 def sample_recommendation_user(model, interactions, user_id, user_dict,
-                               item_dict, threshold=0, nrec_items=10, show=True):
+                               item_dict, threshold=0, nrec_items=10, show=False,
+                               item_feat=None, user_feat=None, njobs=1):
     '''
     Function to produce user recommendations
     Required Input -
@@ -98,15 +105,34 @@ def sample_recommendation_user(model, interactions, user_id, user_dict,
         - Prints list of items the given user has already bought
         - Prints list of N recommended items  which user hopefully will be interested in
     '''
-    n_users, n_items = interactions.shape
+    n_users = len(user_dict)
+    n_items = len(item_dict)
     user_x = user_dict[user_id]
-    scores = pd.Series(model.predict(user_x, np.arange(n_items)))
-    scores.index = interactions.columns
+    scores = pd.Series(
+        model.predict(
+            user_x,
+            np.arange(n_items),
+            item_features=item_feat,
+            user_features=user_feat,
+            num_threads=njobs
+        )
+    )
+    scores.index = item_dict.keys()
     scores = list(pd.Series(scores.sort_values(ascending=False).index))
+
+
+
+    #known_items = list(
+    #    pd.Series(
+    #        interactions.loc[user_id, :][interactions.loc[user_id, :] > threshold].index
+    #    ).sort_values(
+    #        ascending=False
+    #    )
+    #)
 
     known_items = list(
         pd.Series(
-            interactions.loc[user_id, :][interactions.loc[user_id, :] > threshold].index
+            np.where(interactions.tocsr()[user_x, :].todense() > threshold)[1]
         ).sort_values(
             ascending=False
         )
@@ -114,19 +140,19 @@ def sample_recommendation_user(model, interactions, user_id, user_dict,
 
     scores = [x for x in scores if x not in known_items]
     return_score_list = scores[0:nrec_items]
-    known_items = list(pd.Series(known_items).apply(lambda x: item_dict[x]))
-    scores = list(pd.Series(return_score_list).apply(lambda x: item_dict[x]))
-    if show == True:
+    #known_items = list(pd.Series(known_items).apply(lambda x: [k for k,v in item_dict.items() if v == x]))
+    #scores = list(pd.Series(return_score_list).apply(lambda x: [k for k,v in item_dict.items() if v == x]))
+    if show:
         print("Known Likes:")
         counter = 1
         for i in known_items:
-            print(str(counter) + '- ' + i)
+            print("{}- {}".format(counter, i))
             counter += 1
 
         print("\n Recommended Items:")
         counter = 1
         for i in scores:
-            print(str(counter) + '- ' + i)
+            print("{}- ".format(counter, i))
             counter += 1
     return return_score_list
 
@@ -183,7 +209,7 @@ def item_item_recommendation(item_emdedding_distance_matrix, item_id,
     recommended_items = list(pd.Series(item_emdedding_distance_matrix.loc[item_id, :]. \
                                        sort_values(ascending=False).head(n_items + 1). \
                                        index[1:n_items + 1]))
-    if show == True:
+    if show:
         print("Item of interest :{0}".format(item_dict[item_id]))
         print("Item similar to the above item:")
         counter = 1
@@ -192,7 +218,8 @@ def item_item_recommendation(item_emdedding_distance_matrix, item_id,
             counter += 1
     return recommended_items
 
-def predict_ratings(model, interactions, user_id, user_dict,item_dict, threshold=0, nrec_items=10, show=True):
+
+def predict_ratings(model, interactions, user_id, user_dict, item_dict, threshold=0, nrec_items=10, show=True):
     '''
     Function to produce user recommendations
     Required Input -
