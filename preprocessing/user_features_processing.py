@@ -1,5 +1,6 @@
-import sys
-sys.path.append('../')
+import os
+os.chdir("../")
+print(os.getcwd())
 
 import pandas as pd
 import sqlite_functions.sqlite as sql_fun
