@@ -109,7 +109,7 @@ if __name__ == "__main__":
                         loss='warp',
                         k=15,
                         epoch=50,
-                        n_jobs=4)
+                        n_jobs=24)
     print(50 * "-")
     print('Building Recommendations...')
 
@@ -139,7 +139,7 @@ if __name__ == "__main__":
                                                  nrec_items=10,
                                                  show=False,
                                                  user_feat=u_feat,
-                                                 njobs=4)
+                                                 njobs=24)
         dict[user].append(rec_list)
 
     #print(dict)
