@@ -1,5 +1,5 @@
 import pandas as pd
-from ..sqlite_functions import sqlite as sql_fun
+from sqlite_functions import sqlite as sql_fun
 import scipy.sparse as sps
 import numpy as np
 import os
