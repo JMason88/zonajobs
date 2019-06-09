@@ -1,11 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6aadb1c7-7025-4295-8a51-cc5af6312089" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/avisos_a_predecir.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/avisos_a_predecir.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/preprocessing/item_features_processing.py" beforeDir="false" afterPath="$PROJECT_DIR$/preprocessing/item_features_processing.py" afterDir="false" />
-    </list>
+    <list default="true" id="6aadb1c7-7025-4295-8a51-cc5af6312089" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,7 +35,7 @@
         <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="397">
-              <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+              <caret line="39" selection-start-line="39" selection-end-line="39" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -50,8 +46,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/main2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="482">
-              <caret line="126" column="71" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="71" />
+            <state relative-caret-position="289">
+              <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="26" />
               <folding>
                 <element signature="e#0#19#0" expanded="true" />
               </folding>
@@ -210,11 +206,11 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\j.etcheberry.mason\Documents\GitHub\zonajobs\preprocessing" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\j.etcheberry.mason\Documents\GitHub\zonajobs" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\j.etcheberry.mason\Documents\GitHub\zonajobs\preprocessing" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -229,7 +225,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.avisos_a_predecir">
+  <component name="RunManager" selected="Python.main2">
     <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zonajobs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -337,8 +333,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.avisos_a_predecir" />
         <item itemvalue="Python.main2" />
+        <item itemvalue="Python.avisos_a_predecir" />
         <item itemvalue="Python.prueba" />
         <item itemvalue="Python.item_features_processing" />
         <item itemvalue="Python.analysis" />
@@ -614,7 +610,7 @@
     <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="397">
-          <caret line="39" lean-forward="true" selection-start-line="39" selection-end-line="39" />
+          <caret line="39" selection-start-line="39" selection-end-line="39" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
@@ -631,10 +627,17 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/AppData/Local/Programs/Python/Python37/Lib/site-packages/lightfm/_lightfm_fast.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" selection-start-line="8" selection-end-line="8" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/main2.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="482">
-          <caret line="126" column="71" selection-start-line="126" selection-start-column="54" selection-end-line="126" selection-end-column="71" />
+        <state relative-caret-position="289">
+          <caret line="22" column="26" lean-forward="true" selection-start-line="22" selection-start-column="4" selection-end-line="22" selection-end-column="26" />
           <folding>
             <element signature="e#0#19#0" expanded="true" />
           </folding>
