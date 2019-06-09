@@ -1,13 +1,13 @@
+import sys
+sys.path.append('../')
+print(sys.path)
+
+
 import pandas as pd
 import sqlite_functions.sqlite as sql_fun
 import scipy.sparse as sps
 import numpy as np
 import os
-import sys
-
-sys.path.append('../')
-
-print(sys.path)
 
 if __name__ == '__main__':
     con = sql_fun.create_connection()
