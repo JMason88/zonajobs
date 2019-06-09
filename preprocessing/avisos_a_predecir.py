@@ -3,6 +3,11 @@ import pandas as pd
 import sqlite_functions.sqlite as sql_fun
 import os
 import pickle as pkl
+import sys
+
+sys.path.append('../')
+
+print(sys.path)
 
 
 if __name__ == '__main__':
