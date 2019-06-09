@@ -20,7 +20,7 @@ if __name__ == "__main__":
     items = pd.read_pickle('preprocessing/entrada/item_features.pkl')
     avisos_a_predecir = load_pickle('preprocessing/entrada/avisos_a_predecir.pkl')
     train = pd.read_pickle('data/train.pkl')
-    train = train[:100000]
+    #train = train[:100000]
     test  = pd.read_pickle('data/test.pkl')
     #test  = test[:100]
     print("Users in users:%s" % (users.idpostulante.nunique()))
