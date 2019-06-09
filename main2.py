@@ -110,7 +110,7 @@ if __name__ == "__main__":
               item_features=i_feat,
               epochs=50,
               verbose=True,
-              num_threads=4)
+              num_threads=24)
 
 
     print(50 * "-")
