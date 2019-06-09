@@ -1,5 +1,5 @@
 import sys
-sys.path.append('../sqlite_functions/')
+sys.path.append('..')
 print(sys.path)
 
 import numpy as np
