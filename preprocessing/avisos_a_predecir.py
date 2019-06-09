@@ -31,7 +31,7 @@ if __name__ == '__main__':
         --fechapostulacion >= '2018-03-20'
     GROUP BY 1
     ORDER BY 2 DESC
-    LIMIT 150;
+    LIMIT 25;
     '''
 
     df = sql_fun.sql_to_pandas(con, sql_1)

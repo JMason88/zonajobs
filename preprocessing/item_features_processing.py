@@ -32,6 +32,10 @@ if __name__ == '__main__':
         avisos
     '''
 
+#    sql_fun.copy_table_from_df(con, '../data/postulaciones_train.csv', 'avisos', rm_duplicate=True)
+
+
+
     df = sql_fun.sql_to_pandas(con, sql_1)
 
     print(df.head())
