@@ -34,11 +34,14 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="17">
-              <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
+            <state relative-caret-position="68">
+              <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+              <folding>
+                <element signature="e#2#21#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -55,11 +58,13 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/preprocessing/avisos_a_predecir.py">
           <provider selected="true" editor-type-id="text-editor">
             <state>
-              <caret column="7" selection-start-column="7" selection-end-column="7" />
+              <folding>
+                <element signature="e#2#20#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -135,8 +140,8 @@
         <option value="$PROJECT_DIR$/analysis/analysis.py" />
         <option value="$PROJECT_DIR$/analysis/prueba.py" />
         <option value="$PROJECT_DIR$/main2.py" />
-        <option value="$PROJECT_DIR$/preprocessing/item_features_processing.py" />
         <option value="$PROJECT_DIR$/preprocessing/avisos_a_predecir.py" />
+        <option value="$PROJECT_DIR$/preprocessing/item_features_processing.py" />
       </list>
     </option>
   </component>
@@ -222,7 +227,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.avisos_a_predecir">
+  <component name="RunManager" selected="Python.item_features_processing">
     <configuration name="analysis" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="zonajobs" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -330,8 +335,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.avisos_a_predecir" />
         <item itemvalue="Python.item_features_processing" />
+        <item itemvalue="Python.avisos_a_predecir" />
         <item itemvalue="Python.main2" />
         <item itemvalue="Python.prueba" />
         <item itemvalue="Python.analysis" />
@@ -611,13 +616,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="17">
-          <caret line="1" column="19" lean-forward="true" selection-start-line="1" selection-start-column="19" selection-end-line="1" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/main2.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="289">
@@ -631,7 +629,19 @@
     <entry file="file://$PROJECT_DIR$/preprocessing/avisos_a_predecir.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="7" selection-start-column="7" selection-end-column="7" />
+          <folding>
+            <element signature="e#2#20#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/preprocessing/item_features_processing.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="9" lean-forward="true" selection-start-line="4" selection-start-column="9" selection-end-line="4" selection-end-column="9" />
+          <folding>
+            <element signature="e#2#21#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

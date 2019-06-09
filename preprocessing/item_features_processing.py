@@ -1,10 +1,5 @@
-import sys
-sys.path.append('..')
-print(sys.path)
-
-
 import pandas as pd
-import sqlite_functions.sqlite as sql_fun
+from ..sqlite_functions import sqlite as sql_fun
 import scipy.sparse as sps
 import numpy as np
 import os
@@ -15,7 +10,7 @@ if __name__ == '__main__':
     avisos = pd.read_csv('../data/avisos_detalle.csv')
     avisos.drop_duplicates(inplace=True)
     print(avisos.columns)
-    print(50*'-')
+    print(50 * '-')
     print(avisos.idpais.unique())
     print(50 * '-')
     print(avisos.nombre_area.unique())
@@ -37,13 +32,10 @@ if __name__ == '__main__':
         avisos
     '''
 
-#    sql_fun.copy_table_from_df(con, '../data/postulaciones_train.csv', 'avisos', rm_duplicate=True)
-
-
+    #    sql_fun.copy_table_from_df(con, '../data/postulaciones_train.csv', 'avisos', rm_duplicate=True)
 
     df = sql_fun.sql_to_pandas(con, sql_1)
 
     print(df.head())
     print(os.getcwd())
     df.to_pickle('entrada/item_features.pkl')
-

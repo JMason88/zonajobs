@@ -1,11 +1,6 @@
-import sys
-sys.path.append('..')
-print(sys.path)
-
 import numpy as np
 import pandas as pd
-import sqlite_functions.sqlite as sql_fun
-import os
+from ..sqlite_functions import sqlite as sql_fun
 import pickle as pkl
 
 
